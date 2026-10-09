@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0908;
+  --background-elevated: #141210;
+  --surface: #1b1815;
+  --surface-border: #2d2721;
+  --foreground: #f3efe8;
+  --muted: #a89f93;
+  --gold: #c9a24c;
+  --gold-soft: #e6c678;
+  --gold-dark: #8a6a2d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
+  --color-surface: var(--surface);
+  --color-surface-border: var(--surface-border);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-gold-dark: var(--gold-dark);
+  --font-serif: "Source Serif Headline", Georgia, "Times New Roman", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--gold);
+  color: #0a0908;
+}
+
+.font-serif-display {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.gold-text {
+  background: linear-gradient(135deg, var(--gold-soft) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-border {
+  border-color: color-mix(in srgb, var(--gold) 35%, transparent);
+}
+
+.card-surface {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out both;
+}
+
+/* subtle corner-vignette instead of neon glow, keeps things premium not "AI template" */
+.hero-vignette {
+  background:
+    radial-gradient(60% 50% at 15% 10%, color-mix(in srgb, var(--gold) 10%, transparent) 0%, transparent 60%),
+    radial-gradient(50% 40% at 100% 100%, color-mix(in srgb, var(--gold) 6%, transparent) 0%, transparent 60%);
+}
