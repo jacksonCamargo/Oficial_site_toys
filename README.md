@@ -79,11 +79,17 @@ public/
 
 Produtos, preços, categorias e dados de contato ficam centralizados em [`lib/site-data.ts`](lib/site-data.ts) — não é necessário mexer nos componentes para atualizar o catálogo ou os links de contato.
 
+## SEO & Open Graph
+
+O layout já exporta `metadata` completo (`app/layout.tsx`): título, descrição, favicon/ícones gerados a partir da logo real e uma imagem de compartilhamento (`public/og-image.png`) — é o que aparece ao colar o link no WhatsApp/Instagram.
+
+> ⚠️ Antes de publicar, troque `siteUrl` em [`lib/site-data.ts`](lib/site-data.ts) pela URL final do deploy (hoje está como placeholder).
+
 ## Roadmap
 
 - [ ] Depoimentos de clientes reais
 - [ ] Deploy no Vercel com domínio próprio
-- [ ] Favicon e meta tags de Open Graph/SEO
+- [x] Favicon e meta tags de Open Graph/SEO
 - [ ] Formulário de contato funcional
 - [ ] Backend + painel admin (futuro)
 - [ ] Integração com o sistema de pedidos/personalização
