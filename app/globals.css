@@ -30,6 +30,21 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Evita que o header fixo tampe o topo da seção ao navegar pelo menu */
+#inicio,
+#produtos,
+#como-funciona,
+#sobre,
+#contato {
+  scroll-margin-top: 84px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
