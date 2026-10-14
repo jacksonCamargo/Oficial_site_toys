@@ -21,6 +21,10 @@ export type Produto = {
   categoria: string;
   imagem: string;
   destaque?: boolean;
+  /** Preço é só um ponto de partida (varia por tamanho/arte) — mostra "a partir de" */
+  precoAPartir?: boolean;
+  /** Imagem ilustrativa, ainda sem foto real do produto pronto */
+  ilustracao?: boolean;
 };
 
 export const produtos: Produto[] = [
@@ -90,6 +94,56 @@ export const produtos: Produto[] = [
     preco: 35.0,
     categoria: "Canecas",
     imagem: "/produtos/caneca-colorida.png",
+  },
+  {
+    id: 9,
+    nome: "Topo de Bolo",
+    descricao: "Topo personalizado com nome, tema ou frase, para destacar o bolo da festa.",
+    preco: 25.0,
+    categoria: "Papelaria",
+    imagem: "/produtos/papelaria/topo-de-bolo.png",
+    precoAPartir: true,
+    ilustracao: true,
+  },
+  {
+    id: 10,
+    nome: "Caixinha de Lembrancinha",
+    descricao: "Caixinha personalizada para doces ou mimos, com o tema da sua festa.",
+    preco: 4.5,
+    categoria: "Papelaria",
+    imagem: "/produtos/papelaria/caixinha-lembranca.png",
+    precoAPartir: true,
+    ilustracao: true,
+  },
+  {
+    id: 11,
+    nome: "Cartela de Adesivos",
+    descricao: "Adesivos personalizados em diversos formatos, ótimos para rótulos e decoração.",
+    preco: 15.0,
+    categoria: "Papelaria",
+    imagem: "/produtos/papelaria/adesivos.png",
+    precoAPartir: true,
+    ilustracao: true,
+  },
+  {
+    id: 12,
+    nome: "Balão Bubble",
+    descricao: "Balão bubble transparente personalizado, recheado com confetes no tema da festa.",
+    preco: 35.0,
+    categoria: "Papelaria",
+    imagem: "/produtos/papelaria/balao-bubble.png",
+    precoAPartir: true,
+    ilustracao: true,
+  },
+  {
+    id: 13,
+    nome: "Convite Personalizado",
+    descricao: "Convite digital ou impresso, feito sob medida para o estilo do seu evento.",
+    preco: 18.0,
+    categoria: "Papelaria",
+    imagem: "/produtos/papelaria/convite.png",
+    precoAPartir: true,
+    ilustracao: true,
   },
 ];
 
