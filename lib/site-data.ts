@@ -1,5 +1,5 @@
-// Troque pela URL final quando o domínio/deploy estiver definido (Vercel, domínio próprio etc.)
-export const siteUrl = "https://toyssublimacao.vercel.app";
+// URL final do deploy (Vercel) — troque aqui se mudar de domínio no futuro
+export const siteUrl = "https://oficial-site-toys.vercel.app";
 
 export const contato = {
   telefoneExibicao: "(11) 91928-6674",
