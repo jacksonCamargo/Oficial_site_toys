@@ -21,6 +21,8 @@ export default function Products() {
     });
   }, [busca, categoria]);
 
+  const ehPapelaria = categoria === "Papelaria";
+
   return (
     <section id="produtos" className="py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5">
@@ -42,33 +44,58 @@ export default function Products() {
             className="mx-auto block w-full max-w-md rounded-full border border-surface-border bg-surface px-5 py-2.5 text-sm text-foreground placeholder:text-muted/70 focus:border-gold focus:outline-none"
           />
           <div className="flex flex-wrap justify-center gap-2">
-            {categorias.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setCategoria(cat)}
-                className={`rounded-full border px-4 py-1.5 text-sm transition-colors ${
-                  categoria === cat
-                    ? "border-gold bg-gold text-background font-medium"
-                    : "border-surface-border text-muted hover:border-gold/60 hover:text-gold-soft"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+            {categorias.map((cat) => {
+              const ativa = categoria === cat;
+              const papelariaPill = cat === "Papelaria";
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setCategoria(cat)}
+                  className={`rounded-full border px-4 py-1.5 text-sm transition-colors ${
+                    ativa
+                      ? papelariaPill
+                        ? "border-[#e0a9c0] bg-[#e0a9c0] text-white font-medium"
+                        : "border-gold bg-gold text-background font-medium"
+                      : papelariaPill
+                        ? "border-[#e0a9c0]/50 text-[#c9789a] hover:border-[#e0a9c0] hover:bg-[#e0a9c0]/10"
+                        : "border-surface-border text-muted hover:border-gold/60 hover:text-gold-soft"
+                  }`}
+                >
+                  {cat}
+                </button>
+              );
+            })}
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
-          {filtrados.map((p, i) => (
-            <Reveal key={p.id} delay={(i % 4) * 90}>
-              <ProductCard produto={p} onClick={() => setSelecionado(p)} />
-            </Reveal>
-          ))}
-        </div>
+        <div
+          className={`rounded-3xl transition-colors duration-500 ${
+            ehPapelaria ? "border border-[#f0dde6] bg-[#fffaf9] p-5 sm:p-8" : ""
+          }`}
+        >
+          {ehPapelaria && (
+            <p className="mb-6 text-center text-sm text-[#8a7580]">
+              Linha de papelaria personalizada — as imagens abaixo são ilustrações de referência,
+              o portfólio com fotos reais chega em breve.
+            </p>
+          )}
 
-        {filtrados.length === 0 && (
-          <p className="py-12 text-center text-muted">Nenhum produto encontrado.</p>
-        )}
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+            {filtrados.map((p, i) => (
+              <Reveal key={p.id} delay={(i % 4) * 90}>
+                <ProductCard
+                  produto={p}
+                  onClick={() => setSelecionado(p)}
+                  claro={p.categoria === "Papelaria"}
+                />
+              </Reveal>
+            ))}
+          </div>
+
+          {filtrados.length === 0 && (
+            <p className="py-12 text-center text-muted">Nenhum produto encontrado.</p>
+          )}
+        </div>
       </div>
 
       <ProductModal produto={selecionado} onClose={() => setSelecionado(null)} />
