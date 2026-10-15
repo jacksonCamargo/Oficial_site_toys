@@ -15,13 +15,13 @@ export default function ProductCard({
       onClick={onClick}
       className={
         claro
-          ? "group flex flex-col rounded-2xl border border-[#e8d9e3] bg-white p-4 text-left shadow-sm transition-colors hover:border-[#e0a9c0]"
+          ? "group flex flex-col rounded-2xl border border-[color:var(--papel-borda)] bg-white p-4 text-left shadow-sm transition-colors hover:border-[color:var(--papel-acento)]"
           : "card-surface group flex flex-col rounded-2xl p-4 text-left transition-colors hover:border-gold/60"
       }
     >
       <div
         className={`relative mb-4 aspect-square overflow-hidden rounded-xl ${
-          claro ? "bg-[#fdf6f8]" : "bg-background-elevated"
+          claro ? "bg-[color:var(--papel-img-bg)]" : "bg-background-elevated"
         }`}
       >
         <Image
@@ -39,25 +39,25 @@ export default function ProductCard({
         {produto.ilustracao && (
           <span
             className={`absolute left-3 top-3 rounded-full px-2.5 py-1 text-[11px] font-semibold ${
-              claro ? "bg-[#f2b5c4] text-[#6b2f41]" : "bg-surface-border text-muted"
+              claro ? "bg-[color:var(--papel-selo)] text-[color:var(--papel-selo-texto)]" : "bg-surface-border text-muted"
             }`}
           >
             Ilustração
           </span>
         )}
       </div>
-      <span className={`text-xs uppercase tracking-wide ${claro ? "text-[#c9789a]" : "text-gold"}`}>
+      <span className={`text-xs uppercase tracking-wide ${claro ? "text-[color:var(--papel-acento-forte)]" : "text-gold"}`}>
         {produto.categoria}
       </span>
       <h3
-        className={`mt-1 font-serif-display text-lg ${claro ? "text-[#4a3540]" : "text-foreground"}`}
+        className={`mt-1 font-serif-display text-lg ${claro ? "text-[color:var(--papel-titulo)]" : "text-foreground"}`}
       >
         {produto.nome}
       </h3>
-      <p className={`mt-1 line-clamp-2 text-sm ${claro ? "text-[#8a7580]" : "text-muted"}`}>
+      <p className={`mt-1 line-clamp-2 text-sm ${claro ? "text-[color:var(--papel-texto)]" : "text-muted"}`}>
         {produto.descricao}
       </p>
-      <p className={`mt-3 font-semibold ${claro ? "text-[#c9789a]" : "text-gold-soft"}`}>
+      <p className={`mt-3 font-semibold ${claro ? "text-[color:var(--papel-acento-forte)]" : "text-gold-soft"}`}>
         {produto.precoAPartir ? "a partir de " : ""}
         R$ {produto.preco.toFixed(2).replace(".", ",")}
       </p>

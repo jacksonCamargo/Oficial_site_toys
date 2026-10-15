@@ -10,6 +10,19 @@
   --gold: #c9a24c;
   --gold-soft: #e6c678;
   --gold-dark: #8a6a2d;
+
+  /* Tema claro da categoria Papelaria — azul bebê.
+     Pra trocar por verde musgo, use os valores comentados abaixo. */
+  --papel-borda: #d3e4f3;          /* musgo: #d5e0d3 */
+  --papel-acento: #8fbfe8;         /* musgo: #8fa98a */
+  --papel-acento-forte: #3a78ad;   /* musgo: #5a7a55 */
+  --papel-img-bg: #f4f9fe;         /* musgo: #f5f8f3 */
+  --papel-selo: #cfe5f8;           /* musgo: #d6e3d2 */
+  --papel-selo-texto: #1f4a70;     /* musgo: #2f4a2c */
+  --papel-titulo: #2b3f52;         /* musgo: #2f3b2d */
+  --papel-texto: #6b7f91;          /* musgo: #6f7d6c */
+  --papel-painel-borda: #d9e8f5;   /* musgo: #dfe8dc */
+  --papel-painel-bg: #f7fbff;      /* musgo: #f8faf6 */
 }
 
 @theme inline {

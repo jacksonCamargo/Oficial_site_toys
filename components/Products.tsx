@@ -54,10 +54,10 @@ export default function Products() {
                   className={`rounded-full border px-4 py-1.5 text-sm transition-colors ${
                     ativa
                       ? papelariaPill
-                        ? "border-[#e0a9c0] bg-[#e0a9c0] text-white font-medium"
+                        ? "border-[color:var(--papel-acento-forte)] bg-[color:var(--papel-acento-forte)] text-white font-medium"
                         : "border-gold bg-gold text-background font-medium"
                       : papelariaPill
-                        ? "border-[#e0a9c0]/50 text-[#c9789a] hover:border-[#e0a9c0] hover:bg-[#e0a9c0]/10"
+                        ? "border-[color:var(--papel-acento)]/50 text-[color:var(--papel-acento-forte)] hover:border-[color:var(--papel-acento)] hover:bg-[color:var(--papel-acento)]/10"
                         : "border-surface-border text-muted hover:border-gold/60 hover:text-gold-soft"
                   }`}
                 >
@@ -70,11 +70,11 @@ export default function Products() {
 
         <div
           className={`rounded-3xl transition-colors duration-500 ${
-            ehPapelaria ? "border border-[#f0dde6] bg-[#fffaf9] p-5 sm:p-8" : ""
+            ehPapelaria ? "border border-[color:var(--papel-painel-borda)] bg-[color:var(--papel-painel-bg)] p-5 sm:p-8" : ""
           }`}
         >
           {ehPapelaria && (
-            <p className="mb-6 text-center text-sm text-[#8a7580]">
+            <p className="mb-6 text-center text-sm text-[color:var(--papel-texto)]">
               Linha de papelaria personalizada — as imagens abaixo são ilustrações de referência,
               o portfólio com fotos reais chega em breve.
             </p>

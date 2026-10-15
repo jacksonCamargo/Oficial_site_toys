@@ -35,7 +35,7 @@ export default function ProductModal({
       <div
         className={
           claro
-            ? "relative w-full max-w-lg rounded-2xl border border-[#e8d9e3] bg-white p-6"
+            ? "relative w-full max-w-lg rounded-2xl border border-[color:var(--papel-borda)] bg-white p-6"
             : "card-surface relative w-full max-w-lg rounded-2xl p-6"
         }
         onClick={(e) => e.stopPropagation()}
@@ -45,7 +45,7 @@ export default function ProductModal({
           aria-label="Fechar"
           className={`absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border ${
             claro
-              ? "border-[#e8d9e3] text-[#8a7580] hover:text-[#c9789a]"
+              ? "border-[color:var(--papel-borda)] text-[color:var(--papel-texto)] hover:text-[color:var(--papel-acento-forte)]"
               : "border-surface-border text-muted hover:text-gold-soft"
           }`}
         >
@@ -54,14 +54,14 @@ export default function ProductModal({
 
         <div
           className={`relative mb-5 aspect-square overflow-hidden rounded-xl ${
-            claro ? "bg-[#fdf6f8]" : "bg-background-elevated"
+            claro ? "bg-[color:var(--papel-img-bg)]" : "bg-background-elevated"
           }`}
         >
           <Image src={produto.imagem} alt={produto.nome} fill className="object-contain p-6" sizes="500px" />
           {produto.ilustracao && (
             <span
               className={`absolute left-3 top-3 rounded-full px-2.5 py-1 text-[11px] font-semibold ${
-                claro ? "bg-[#f2b5c4] text-[#6b2f41]" : "bg-surface-border text-muted"
+                claro ? "bg-[color:var(--papel-selo)] text-[color:var(--papel-selo-texto)]" : "bg-surface-border text-muted"
               }`}
             >
               Ilustração
@@ -69,16 +69,16 @@ export default function ProductModal({
           )}
         </div>
 
-        <span className={`text-xs uppercase tracking-wide ${claro ? "text-[#c9789a]" : "text-gold"}`}>
+        <span className={`text-xs uppercase tracking-wide ${claro ? "text-[color:var(--papel-acento-forte)]" : "text-gold"}`}>
           {produto.categoria}
         </span>
-        <h3 className={`mt-1 font-serif-display text-2xl ${claro ? "text-[#4a3540]" : "text-foreground"}`}>
+        <h3 className={`mt-1 font-serif-display text-2xl ${claro ? "text-[color:var(--papel-titulo)]" : "text-foreground"}`}>
           {produto.nome}
         </h3>
-        <p className={`mt-2 text-sm leading-relaxed ${claro ? "text-[#8a7580]" : "text-muted"}`}>
+        <p className={`mt-2 text-sm leading-relaxed ${claro ? "text-[color:var(--papel-texto)]" : "text-muted"}`}>
           {produto.descricao}
         </p>
-        <p className={`mt-4 text-xl font-semibold ${claro ? "text-[#c9789a]" : "text-gold-soft"}`}>
+        <p className={`mt-4 text-xl font-semibold ${claro ? "text-[color:var(--papel-acento-forte)]" : "text-gold-soft"}`}>
           {precoTexto}
         </p>
 
@@ -90,7 +90,7 @@ export default function ProductModal({
           rel="noopener noreferrer"
           className={
             claro
-              ? "mt-6 block w-full rounded-full bg-[#e0a9c0] px-6 py-3 text-center font-semibold text-white transition-colors hover:bg-[#c9789a]"
+              ? "mt-6 block w-full rounded-full bg-[color:var(--papel-acento-forte)] px-6 py-3 text-center font-semibold text-white transition-opacity hover:opacity-90"
               : "mt-6 block w-full rounded-full bg-gold px-6 py-3 text-center font-semibold text-background transition-colors hover:bg-gold-soft"
           }
         >
