@@ -1,14 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0908;
-  --background-elevated: #141210;
-  --surface: #1b1815;
-  --surface-border: #2d2721;
-  --foreground: #f3efe8;
-  --muted: #a89f93;
-  --gold: #c9a24c;
-  --gold-soft: #e6c678;
+  /* Paleta: base pastel + dourado da marca (ver README) */
+  --sage: #d2dfcd;
+  --blush: #f2d6d5;
+  --sky: #c9e4f9;
+
+  --background: var(--sage);
+  --background-elevated: #ffffff;
+  --surface: #fffdf8;
+  --surface-border: #b7c8b0;
+  --foreground: #2b2a26;
+  --muted: #55524a;
+  --gold: #b98522;       /* dourado padrão: linhas, ícones, fundos de botão */
+  --gold-soft: #7a5a14;  /* dourado escuro, só para texto pequeno (contraste) */
   --gold-dark: #8a6a2d;
 
   /* Tema claro da categoria Papelaria — azul bebê.
@@ -17,7 +22,7 @@
   --papel-acento: #8fbfe8;         /* musgo: #8fa98a */
   --papel-acento-forte: #3a78ad;   /* musgo: #5a7a55 */
   --papel-img-bg: #f4f9fe;         /* musgo: #f5f8f3 */
-  --papel-selo: #cfe5f8;           /* musgo: #d6e3d2 */
+  --papel-selo: #c9e4f9;           /* musgo: #d6e3d2 */
   --papel-selo-texto: #1f4a70;     /* musgo: #2f4a2c */
   --papel-titulo: #2b3f52;         /* musgo: #2f3b2d */
   --papel-texto: #6b7f91;          /* musgo: #6f7d6c */
@@ -32,6 +37,9 @@
   --color-surface-border: var(--surface-border);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
+  --color-sage: var(--sage);
+  --color-blush: var(--blush);
+  --color-sky: var(--sky);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
   --color-gold-dark: var(--gold-dark);
@@ -66,7 +74,7 @@ body {
 
 ::selection {
   background: var(--gold);
-  color: #0a0908;
+  color: #2b2a26;
 }
 
 .font-serif-display {
@@ -107,6 +115,6 @@ body {
 /* subtle corner-vignette instead of neon glow, keeps things premium not "AI template" */
 .hero-vignette {
   background:
-    radial-gradient(60% 50% at 15% 10%, color-mix(in srgb, var(--gold) 10%, transparent) 0%, transparent 60%),
-    radial-gradient(50% 40% at 100% 100%, color-mix(in srgb, var(--gold) 6%, transparent) 0%, transparent 60%);
+    radial-gradient(60% 50% at 15% 10%, color-mix(in srgb, var(--blush) 70%, transparent) 0%, transparent 60%),
+    radial-gradient(50% 40% at 100% 100%, color-mix(in srgb, var(--sky) 70%, transparent) 0%, transparent 60%);
 }
