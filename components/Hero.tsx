@@ -12,7 +12,7 @@ export default function Hero() {
     >
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-2 lg:gap-16">
         <Reveal className="space-y-7 text-center lg:text-left">
-          <p className="text-sm uppercase tracking-[0.25em] text-gold">
+          <p className="text-sm uppercase tracking-[0.25em] text-gold-soft">
             Produtos personalizados por sublimação
           </p>
           <h1 className="font-serif-display text-4xl font-semibold leading-[1.1] text-foreground md:text-6xl">
@@ -27,7 +27,7 @@ export default function Hero() {
               href={contato.whatsappMensagem("Oi! Quero fazer um orçamento de produto personalizado.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full rounded-full bg-gold px-8 py-3.5 text-center font-semibold text-background transition-transform hover:scale-[1.02] hover:bg-gold-soft sm:w-auto"
+              className="w-full rounded-full bg-gold px-8 py-3.5 text-center font-semibold text-foreground transition-transform hover:scale-[1.02] hover:brightness-110 sm:w-auto"
             >
               Falar no WhatsApp
             </a>

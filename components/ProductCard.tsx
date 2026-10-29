@@ -32,7 +32,7 @@ export default function ProductCard({
           sizes="(min-width: 1024px) 23vw, (min-width: 640px) 45vw, 90vw"
         />
         {produto.destaque && !claro && (
-          <span className="absolute left-3 top-3 rounded-full bg-gold px-2.5 py-1 text-[11px] font-semibold text-background">
+          <span className="absolute left-3 top-3 rounded-full bg-gold px-2.5 py-1 text-[11px] font-semibold text-foreground">
             Destaque
           </span>
         )}
@@ -46,7 +46,7 @@ export default function ProductCard({
           </span>
         )}
       </div>
-      <span className={`text-xs uppercase tracking-wide ${claro ? "text-[color:var(--papel-acento-forte)]" : "text-gold"}`}>
+      <span className={`text-xs uppercase tracking-wide ${claro ? "text-[color:var(--papel-acento-forte)]" : "text-gold-soft"}`}>
         {produto.categoria}
       </span>
       <h3

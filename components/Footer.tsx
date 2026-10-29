@@ -7,7 +7,7 @@ export default function Footer() {
   const ano = ANO_ATUAL;
 
   return (
-    <footer className="border-t border-surface-border bg-background-elevated py-12">
+    <footer className="border-t border-surface-border bg-sky py-12">
       <div className="mx-auto max-w-6xl px-5">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-3">

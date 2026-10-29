@@ -27,7 +27,7 @@ export default function Products() {
     <section id="produtos" className="py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5">
         <Reveal className="mb-10 text-center md:mb-14">
-          <p className="text-sm uppercase tracking-[0.25em] text-gold">Catálogo</p>
+          <p className="text-sm uppercase tracking-[0.25em] text-gold-soft">Catálogo</p>
           <h2 className="mt-3 font-serif-display text-3xl font-semibold text-foreground md:text-4xl">
             Nossos Produtos
           </h2>
@@ -55,7 +55,7 @@ export default function Products() {
                     ativa
                       ? papelariaPill
                         ? "border-[color:var(--papel-acento-forte)] bg-[color:var(--papel-acento-forte)] text-white font-medium"
-                        : "border-gold bg-gold text-background font-medium"
+                        : "border-gold bg-gold text-foreground font-medium"
                       : papelariaPill
                         ? "border-[color:var(--papel-acento)]/50 text-[color:var(--papel-acento-forte)] hover:border-[color:var(--papel-acento)] hover:bg-[color:var(--papel-acento)]/10"
                         : "border-surface-border text-muted hover:border-gold/60 hover:text-gold-soft"

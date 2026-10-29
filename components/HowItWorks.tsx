@@ -25,10 +25,10 @@ const passos = [
 
 export default function HowItWorks() {
   return (
-    <section id="como-funciona" className="py-20 md:py-28">
+    <section id="como-funciona" className="bg-sky py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5">
         <Reveal className="mb-14 text-center md:mb-16">
-          <p className="text-sm uppercase tracking-[0.25em] text-gold">Passo a passo</p>
+          <p className="text-sm uppercase tracking-[0.25em] text-gold-soft">Passo a passo</p>
           <h2 className="mt-3 font-serif-display text-3xl font-semibold text-foreground md:text-4xl">
             Como funciona
           </h2>

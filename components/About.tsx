@@ -18,11 +18,11 @@ const diferenciais = [
 
 export default function About() {
   return (
-    <section id="sobre" className="py-20 md:py-28">
+    <section id="sobre" className="bg-blush py-20 md:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-2 lg:gap-20">
         <Reveal className="order-2 space-y-8 lg:order-1">
           <div>
-            <p className="text-sm uppercase tracking-[0.25em] text-gold">Nossa história</p>
+            <p className="text-sm uppercase tracking-[0.25em] text-gold-soft">Nossa história</p>
             <h2 className="mt-3 font-serif-display text-3xl font-semibold text-foreground md:text-4xl">
               Sobre a Toys Sublimação
             </h2>
@@ -37,7 +37,7 @@ export default function About() {
           </p>
 
           <div className="card-surface rounded-xl p-6">
-            <p className="text-xs uppercase tracking-[0.2em] text-gold">Fundador &amp; gestor</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-gold-soft">Fundador &amp; gestor</p>
             <p className="mt-2 font-serif-display text-lg text-foreground">
               Jackson Anderson Camargo Tristão
             </p>

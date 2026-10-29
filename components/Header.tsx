@@ -101,7 +101,7 @@ export default function Header() {
             href={contato.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border gold-border bg-gold/10 px-5 py-2 text-sm font-medium text-gold-soft transition-colors hover:bg-gold hover:text-background"
+            className="rounded-full border gold-border bg-gold/10 px-5 py-2 text-sm font-medium text-gold-soft transition-colors hover:bg-gold hover:text-foreground"
           >
             Falar no WhatsApp
           </a>

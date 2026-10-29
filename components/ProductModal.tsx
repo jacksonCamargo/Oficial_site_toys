@@ -69,7 +69,7 @@ export default function ProductModal({
           )}
         </div>
 
-        <span className={`text-xs uppercase tracking-wide ${claro ? "text-[color:var(--papel-acento-forte)]" : "text-gold"}`}>
+        <span className={`text-xs uppercase tracking-wide ${claro ? "text-[color:var(--papel-acento-forte)]" : "text-gold-soft"}`}>
           {produto.categoria}
         </span>
         <h3 className={`mt-1 font-serif-display text-2xl ${claro ? "text-[color:var(--papel-titulo)]" : "text-foreground"}`}>
@@ -91,7 +91,7 @@ export default function ProductModal({
           className={
             claro
               ? "mt-6 block w-full rounded-full bg-[color:var(--papel-acento-forte)] px-6 py-3 text-center font-semibold text-white transition-opacity hover:opacity-90"
-              : "mt-6 block w-full rounded-full bg-gold px-6 py-3 text-center font-semibold text-background transition-colors hover:bg-gold-soft"
+              : "mt-6 block w-full rounded-full bg-gold px-6 py-3 text-center font-semibold text-foreground transition-colors hover:brightness-110"
           }
         >
           Pedir pelo WhatsApp

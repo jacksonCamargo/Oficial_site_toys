@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <section id="contato" className="py-20 md:py-28">
       <Reveal className="mx-auto max-w-4xl px-5 text-center">
-        <p className="text-sm uppercase tracking-[0.25em] text-gold">Fale com a gente</p>
+        <p className="text-sm uppercase tracking-[0.25em] text-gold-soft">Fale com a gente</p>
         <h2 className="mt-3 font-serif-display text-3xl font-semibold text-foreground md:text-4xl">
           Entre em Contato
         </h2>
@@ -46,7 +46,7 @@ export default function Contact() {
           href={contato.whatsappMensagem("Oi! Encontrei a Toys Sublimação pelo site e quero fazer um pedido.")}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-10 inline-block rounded-full bg-gold px-10 py-3.5 font-semibold text-background transition-transform hover:scale-[1.02] hover:bg-gold-soft"
+          className="mt-10 inline-block rounded-full bg-gold px-10 py-3.5 font-semibold text-foreground transition-transform hover:scale-[1.02] hover:brightness-110"
         >
           Iniciar conversa no WhatsApp
         </a>
