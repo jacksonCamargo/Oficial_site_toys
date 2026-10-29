@@ -108,7 +108,8 @@ Direção visual: sair do preto do modo dark e adotar uma base clara em tons pas
 - O texto corrente sobre o pastel deve ser um cinza-escuro quente (sugestão: `#2B2A26`, contraste acima de 10:1 nas três cores base).
 - Botão com fundo dourado leva texto escuro por cima, nunca branco.
 - `#FCE79A` e `#FFF2B8` são claros demais para texto ou bordas; só fazem sentido como fundo de destaque, e só quando forem pedidos.
-- Em desenvolvimento: o site ainda usa o tema dark atual. Esta paleta é o plano da troca, que ainda não foi aplicada no código.
+- **Aplicada no site.** Fundo da página em verde sálvia, faixas em azul bebê (Como funciona e rodapé) e rosa blush (Sobre). Os valores ficam em `app/globals.css`.
+- Para pequenos textos dourados (rótulos, preços, links) o código usa `--gold-soft: #7A5A14`, um tom mais escuro do mesmo dourado, porque `#B98522` sozinho não tem contraste suficiente para texto pequeno sobre o pastel. Os outros dourados continuam em reserva.
 
 ## SEO & Open Graph
 
@@ -118,7 +119,7 @@ O layout já exporta `metadata` completo (`app/layout.tsx`): título, descriçã
 
 ## Roadmap
 
-- [ ] Aplicar a nova paleta pastel + dourado (substituir o tema dark)
+- [x] Aplicar a nova paleta pastel + dourado (substituir o tema dark)
 - [ ] Depoimentos de clientes reais
 - [ ] Deploy no Vercel com domínio próprio
 - [x] Favicon e meta tags de Open Graph/SEO
