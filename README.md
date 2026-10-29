@@ -79,6 +79,37 @@ public/
 
 Produtos, preços, categorias e dados de contato ficam centralizados em [`lib/site-data.ts`](lib/site-data.ts) — não é necessário mexer nos componentes para atualizar o catálogo ou os links de contato.
 
+## Paleta de cores
+
+Direção visual: sair do preto do modo dark e adotar uma base clara em tons pastel, mantendo o dourado da marca como destaque.
+
+### Cores base (pastel)
+
+| Cor | Hex | Nome sugerido |
+|---|---|---|
+| ![](https://placehold.co/24x24/D2DFCD/D2DFCD.png) | `#D2DFCD` | Verde sálvia |
+| ![](https://placehold.co/24x24/F2D6D5/F2D6D5.png) | `#F2D6D5` | Rosa blush |
+| ![](https://placehold.co/24x24/C9E4F9/C9E4F9.png) | `#C9E4F9` | Azul bebê |
+
+### Dourados (usar misturados somente quando solicitado)
+
+| Cor | Hex | Papel |
+|---|---|---|
+| ![](https://placehold.co/24x24/B98522/B98522.png) | `#B98522` | **Dourado padrão** (em uso por enquanto) |
+| ![](https://placehold.co/24x24/D9A83F/D9A83F.png) | `#D9A83F` | Reserva — dourado médio |
+| ![](https://placehold.co/24x24/FCE79A/FCE79A.png) | `#FCE79A` | Reserva — dourado claro |
+| ![](https://placehold.co/24x24/FFF2B8/FFF2B8.png) | `#FFF2B8` | Reserva — dourado suave |
+
+**Dourado padrão: `#B98522`.** É o mais próximo do bronze da logo e o único dos quatro com contraste razoável sobre as cores pastel (cerca de 2,4:1; os outros ficam abaixo de 1,7:1 e somem).
+
+### Regras de uso
+
+- O dourado serve para linhas, sublinhados, ícones, bordas e títulos grandes. **Não usar como texto pequeno sobre o pastel**, porque o contraste não atinge o mínimo de leitura.
+- O texto corrente sobre o pastel deve ser um cinza-escuro quente (sugestão: `#2B2A26`, contraste acima de 10:1 nas três cores base).
+- Botão com fundo dourado leva texto escuro por cima, nunca branco.
+- `#FCE79A` e `#FFF2B8` são claros demais para texto ou bordas; só fazem sentido como fundo de destaque, e só quando forem pedidos.
+- Em desenvolvimento: o site ainda usa o tema dark atual. Esta paleta é o plano da troca, que ainda não foi aplicada no código.
+
 ## SEO & Open Graph
 
 O layout já exporta `metadata` completo (`app/layout.tsx`): título, descrição, favicon/ícones gerados a partir da logo real e uma imagem de compartilhamento (`public/og-image.png`) — é o que aparece ao colar o link no WhatsApp/Instagram.
@@ -87,6 +118,7 @@ O layout já exporta `metadata` completo (`app/layout.tsx`): título, descriçã
 
 ## Roadmap
 
+- [ ] Aplicar a nova paleta pastel + dourado (substituir o tema dark)
 - [ ] Depoimentos de clientes reais
 - [ ] Deploy no Vercel com domínio próprio
 - [x] Favicon e meta tags de Open Graph/SEO
